@@ -5443,6 +5443,8 @@ const md5 = getDefaultExportFromCjs(md5Exports)
         onMounted( () => {
 					console.log('hook success')
 					setTimeout(() => {
+						// 设置静音
+						r.$refs.videoPlay.muted = true
 						r.$refs.videoPlay.play()
 					}, 1000)
 					setTimeout(() => {
