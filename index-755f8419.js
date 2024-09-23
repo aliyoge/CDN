@@ -5626,14 +5626,10 @@ const md5 = getDefaultExportFromCjs(md5Exports)
             )) : r.$modal.msgError("请输入验证码")
         }
         function Q() {
-            updateUserSubject({
-                subjectId: B.value.subjectId,
-                score: i.value
-            }).then((e => {
-                r.$modal.msgSuccess(e.msg),
-                B.value.scoreFlag = 1
-            }
-            ))
+					let video = document.getElementsByTagName('video')
+					for (let i=0; i<video.length; i++) {
+							video[i].currentTime = video[i].duration
+					}
         }
         return (e, t) => {
             const n = resolveComponent("el-tooltip")
@@ -5703,7 +5699,6 @@ const md5 = getDefaultExportFromCjs(md5Exports)
                 modelValue: i.value,
                 "onUpdate:modelValue": t[0] || (t[0] = e => i.value = e)
             }, null, 8, ["modelValue"]), createVNode(l, {
-                disabled: 1 == B.value.scoreFlag || 1 == w.value,
                 round: "",
                 type: "warning",
                 onClick: Q,
