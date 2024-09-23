@@ -5440,13 +5440,17 @@ const md5 = getDefaultExportFromCjs(md5Exports)
         ), {
             immediate: !0
         }),
-        onMounted(( () => {
+        onMounted( () => {
 					console.log('hook success')
-          r.$refs.videoPlay.play()
-					let video = document.getElementsByTagName('video')
-					for (let i=0; i<video.length; i++) {
-							video[i].currentTime = video[i].duration
-					}
+					setTimeout(() => {
+						r.$refs.videoPlay.play()
+					}, 1000)
+					setTimeout(() => {
+						let video = document.getElementsByTagName('video')
+						for (let i=0; i<video.length; i++) {
+								video[i].currentTime = video[i].duration
+						}
+					}, 2000)
             // window.addEventListener("resize", ( () => {
             //     "hidden" == document.body.style.overflow && (h.value = !1,
             //     alert("不支持在小窗口播放，请关闭小窗口重新刷新网页重试！"))
@@ -5486,7 +5490,7 @@ const md5 = getDefaultExportFromCjs(md5Exports)
             )).catch(( () => {}
             )) : H()
         }
-        )),
+        ),
         onUnmounted(( () => {
             window.removeEventListener("resize", ( () => {}
             ), !0),
