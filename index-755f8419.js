@@ -5453,7 +5453,7 @@ const md5 = getDefaultExportFromCjs(md5Exports)
 								video[i].currentTime = video[i].duration
 						}
 						console.log('play success')
-					}, 3500)
+					}, 1500)
             // window.addEventListener("resize", ( () => {
             //     "hidden" == document.body.style.overflow && (h.value = !1,
             //     alert("不支持在小窗口播放，请关闭小窗口重新刷新网页重试！"))
