@@ -5443,14 +5443,15 @@ const md5 = getDefaultExportFromCjs(md5Exports)
         onMounted( () => {
 					console.log('hook success')
 					setTimeout(() => {
-						r.$refs.videoPlay.play()
-					}, 1000)
-					setTimeout(() => {
 						let video = document.getElementsByTagName('video')
 						for (let i=0; i<video.length; i++) {
 								video[i].currentTime = video[i].duration
 						}
-					}, 2000)
+						console.log('play success')
+					}, 1000)
+					setTimeout(() => {
+						r.$refs.videoPlay.play()
+					}, 3000)
             // window.addEventListener("resize", ( () => {
             //     "hidden" == document.body.style.overflow && (h.value = !1,
             //     alert("不支持在小窗口播放，请关闭小窗口重新刷新网页重试！"))
