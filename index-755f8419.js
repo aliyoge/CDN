@@ -5354,15 +5354,15 @@ const md5 = getDefaultExportFromCjs(md5Exports)
                 color: "#409eff",
                 title: "",
                 src: "",
-                muted: !1,
+                muted: 1,
                 currentTime: 0,
                 webFullScreen: !1,
                 autoPlay: !1,
                 loop: !1,
                 mirror: !1,
                 ligthOff: !1,
-                volume: .3,
-                control: !0,
+                volume: 0,
+                control: 1,
                 pip: !1,
                 controlBtns: ["audioTrack", "volume", "pageFullScreen"]
             }
